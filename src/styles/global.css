@@ -20,6 +20,15 @@ html {
     font-size: 2.5rem;
   }
 
+  html.dark {
+    background-color: #10314a;
+    color: #fff;
+  }
+  
+  .dark .nav-links a {
+    color: #fff;
+  }
+
 /* nav styles */
 .hamburger {
     padding-right: 20px;
