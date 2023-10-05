@@ -1,6 +1,7 @@
 ---
 import Hamburger from './Hamburger.astro';
 import Navigation from './Navigation.astro';
+import { ViewTransitions } from 'astro:transitions';
 ---
 
 <header>
@@ -10,4 +11,5 @@ import Navigation from './Navigation.astro';
         <Hamburger />
         <Navigation />
     </nav>
+    <ViewTransitions />
 </header>
