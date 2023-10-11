@@ -18,9 +18,12 @@ const { frontmatter } = Astro.props;
 <slot />
 </BaseLayout>
 <style>
-    a {
-      color: #00539F;
-    }
+     a:link {
+    color: #fdba74;
+  }
+  a:visited {
+    color: #fed7aa;
+  }
   
     .tags {
       display: flex;
@@ -29,10 +32,10 @@ const { frontmatter } = Astro.props;
   
     .tag {
       margin: 0.25em;
-      border: dotted 1px #a1a1a1;
+      border: dotted 1px #f97316;
       border-radius: .5em;
-      padding: .5em 1em;
+      padding: .3em .6em;
       font-size: 1.15em;
-      background-color: #F8FCFD;
+      background-color: #111827;
     }
   </style>
