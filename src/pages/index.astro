@@ -4,7 +4,10 @@ import Greeting from '../components/Greeting.jsx';
 const pageTitle = "Home Page";
 ---
 <BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
-  <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
-  <p>We have a lot of work to do!</p>
+  <div class="home-content-div">
+    
+    <h2>My awesome blog subtitle</h2>
+      <Greeting client:load messages={["Hej", "Hallo", "Hola", "Habari"]} />
+        <p>We have a lot of work to do!</p>
+  </div>
 </BaseLayout>
