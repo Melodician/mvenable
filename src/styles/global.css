@@ -30,7 +30,7 @@ html {
     color: #ea580c;
     font-family: 'Jura', sans-serif;
     margin: 1rem 0;
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 700
   }
   
@@ -46,7 +46,7 @@ html {
   }
 
 .container {
-  max-width: 700px;
+  max-width: 100%;
   mix-blend-mode: lighten;
   background-color: #121927;
   background-image: radial-gradient(circle, #121927 56%, #0e1420);
@@ -54,14 +54,15 @@ html {
   border-radius: 10px;
   margin-top: 16px;
   margin-bottom: 8px;
-  padding: 8px 24px 8px;
+  padding: 8px 16px 8px;
   position: static;
   
 }
 
 .main {
+  clear: right;
   max-width: 900px;
-  min-height: 600px;
+  min-height: 300px;
   opacity: ;
   mix-blend-mode: normal;
   background-color: #121927;
@@ -70,7 +71,7 @@ html {
   border-radius: 10px;
   margin-top: 16px;
   margin-bottom: 8px;
-  padding: 8px 24px 8px;
+  padding: 8px 18px 8px;
   
 }
 
@@ -78,14 +79,18 @@ html {
   flex-direction: column;
   justify-content: flex-start;
   align-self: stretch;
-  align-items: center;
+  align-items: start;
   display: flex;
   position: static;
   max-height: 0px;
 }
 
-
-
+.logo {
+  scale: 0.4;
+  position: relative;
+  top: -112px;
+  left: -100px;
+}
 
 .me-img {
   max-height: 250px;
@@ -98,27 +103,26 @@ html {
   justify-content: center;
   gap: 1rem;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }
 
-.logo {
-  scale: 0.6;
-  position: relative;
-  top: -115px;
-  left: 8px;
-}
+
 
 /* nav styles */
 .hamburger {
     padding-right: 20px;
     cursor: pointer;
+    float: right;
   }
   
   .hamburger .line {
     display: block;
-    width: 40px;
-    height: 5px;
+    width: 38px;
+    height: 4px;
     margin-bottom: 10px;
     background-color: #455163;
+    right: 10px;
+    border: 1px solid #080c13;
   }
 
 .nav-links {
@@ -141,6 +145,7 @@ html {
     font-size: 1.2rem;
     border: 1px solid transparent;
     text-transform: uppercase;
+    clear: right;
   }
   
   .nav-links a:hover,
@@ -177,21 +182,38 @@ html {
   
     .nav-links a {
       display: inline-block;
-      padding: 2px 6px;
-      margin: 2px 58px;
+      padding: 0px 6px;
+      margin: 0px 58px;
     }
   
     .hamburger {
       display: none;
     }
 
+    .logo-div {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-self: stretch;
+      align-items: center;
+      display: flex;
+      position: static;
+      max-height: 0px;
+    }
+
+    .logo {
+      scale: 0.55;
+      position: relative;
+      top: -112px;
+      left: 8px;
+    }
+
     .home-content-div {
       display: block;
-      min-height: 400px;
+      min-height: 300px;
       background-image: url(me.png);
       background-size: auto 250px;
       background-repeat: no-repeat;
       background-position: 110% 0%;
-      padding: 30px;
+      padding: 0px;
     }
   }

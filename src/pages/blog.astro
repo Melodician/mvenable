@@ -1,16 +1,21 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from '../layouts/BaseLayout.astro';
 import BlogPost from '../components/BlogPost.astro';
-const allPosts = await Astro.glob('../pages/posts/*.md');
+const allPosts = await getCollection("posts");
 const pageTitle = "My Wicked Sweet Blog";
 ---
 <BaseLayout pageTitle={pageTitle}>
         <h2>The infamous 3rd page!</h2>
           
-        <p>So far we have 3 pages but soon we'll have many more!!</p>
+        <p>So far we only have 3 pages, but it's a start..</p>
           
-        <p>Let's work on some better ways of doing things and a little styling next!</p>
+        <p>Gonna work on some better ways of doing things and some other stuff to polish things up but I'll be adding real blog posts soon!</p>
         <ul>
-            {allPosts.map((post) => <BlogPost url={post.url} title={post.frontmatter.title} />)}
+            {
+                allPosts.reverse().map((post) => (
+                    <BlogPost url={`/posts/${post.slug}/`} title={post.data.title} />
+                    ))
+            }
         </ul>
 </BaseLayout>

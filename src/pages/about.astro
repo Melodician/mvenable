@@ -10,7 +10,7 @@ const identity = {
   hobbies: ["Guitar", "Game Design", "Composing Music"],
 };
 
-const skills = ["HTML", "CSS", "JavaScript", "Next.js", "Astro", "Graphic Design"];
+const skills = ["HTML", "CSS", "JavaScript", "React", "Next.js", "Astro", "Vue", "Graphic Design"];
 
 const happy = true;
 const finished = true;
@@ -36,28 +36,19 @@ const textCase = "uppercase";
           </style>
 	</head>
     <BaseLayout pageTitle={pageTitle}>
-        <h2>... and my new Astro site!</h2>
+        <h2>... at least what I can say for now</h2>
           
-        <p>I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!</p>
+        <p>I'm a software developer interested in delivering content in engaging and compelling new ways.</p>
+            <p>I <b>love</b> to code - it's definately my greatest passion these days - but other competing interests include graphic art, game design, and composing music.
+            I play guitar, bass, drums, piano, and just about anything else I can get my hands on but probably feel most at home in a DAW (Cubase).</p>
           
-        <p>This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!</p>
-        <p>Here are a few facts about me:</p>
-            <ul>
-                <li>My name is {identity.firstName}.</li>
-                <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-                {identity.hobbies.length >= 2 &&
-                    <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-                }
-            </ul>
-                <p>My skills are:</p>
+            
+            <p>My skillset includes:</p>
                 <ul>
                     {skills.map((skill) => <li class="skill">{skill}</li>)}
                 </ul>
 
-        {happy && <p>I am happy to be learning Astro!</p>}
+        <p>I am happy to finally be doing this site and I would love to work with others!</p>
 
-        {finished && <p>I finished this tutorial!</p>}
-                
-        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
     </BaseLayout> 
 </html>
