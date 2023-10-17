@@ -86,7 +86,7 @@ html {
 }
 
 .logo {
-  scale: 0.2;
+  scale: 0.4;
   position: relative;
   top: -112px;
   left: -74px;
@@ -201,7 +201,7 @@ html {
     }
 
     .logo {
-      scale: 0.2;
+      scale: 0.55;
       position: relative;
       top: -112px;
       left: 8px;
