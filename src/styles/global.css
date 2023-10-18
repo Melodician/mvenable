@@ -86,10 +86,19 @@ html {
 }
 
 .logo {
-  scale: 0.4;
+  scale: 1;
   position: relative;
   top: -112px;
   left: -74px;
+  display: none;
+}
+
+.logo-side {
+  scale: 1;
+  position: relative;
+  top: -54px;
+  left: -36px;
+  display: initial;
 }
 
 .me-img {
@@ -201,10 +210,19 @@ html {
     }
 
     .logo {
-      scale: 0.55;
+      scale: 1;
       position: relative;
-      top: -112px;
+      top: -68px;
       left: 8px;
+      display: initial;
+    }
+    
+    .logo-side {
+      scale: 1;
+      position: relative;
+      top: -54px;
+      left: -36px;
+      display: none;
     }
 
     .home-content-div {
