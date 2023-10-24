@@ -7,6 +7,33 @@ import Footer from '../components/Footer.astro';
 const { pageTitle } = Astro.props;
 ---
 
+<script>
+	import { stagger, spring, timeline } from "motion";
+	const cards = document.querySelectorAll(".main");
+  
+	const sequence = [
+	  [
+		".main",
+		{ opacity: 0, pointerEvents: "none" },
+		{ easing: "ease-out" },
+	  ],
+	  [
+		cards,
+		{ y: ["60%", "0%"], opacity: [0, 1] },
+		{
+		  at: "-1.1",
+		  duration: 0.4,
+		  delay: stagger(0.3),
+		  easing: spring({ velocity: 100, stiffness: 50, damping: 10 }),
+		},
+	  ],
+	];
+  
+	timeline(sequence, {
+  defaultOptions: { ease: "ease-in-out" },
+})
+  </script>
+
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />

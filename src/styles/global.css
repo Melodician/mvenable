@@ -75,6 +75,10 @@ html {
   
 }
 
+.post-by {
+  font-size: 0.8rem;
+}
+
 .logo-div {
   flex-direction: column;
   justify-content: flex-start;

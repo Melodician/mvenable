@@ -1,7 +1,7 @@
 ---
 title: 'A tour of Svelte Components'
 pubDate: 2023-10-20
-description: "Svelte's own component examples page"
+description: "Svelte's component examples page"
 author: 'Mat Venable'
 image:
     url: 'https://mvenable.vercel.app/svelte-horizontal.png'
