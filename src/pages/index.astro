@@ -1,12 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting.jsx';
-import { deliveryClient } from "../lib/kontent";
-import { butterClient } from "../lib/buttercms";
+// import { deliveryClient } from "../lib/kontent";
+// import { butterClient } from "../lib/buttercms";
 
 const pageTitle = "Home Page";
 
-const response = await butterClient.content.retrieve(["blog_post"]);
+// const response = await butterClient.content.retrieve(["blog_post"]);
 
 interface BlogPost {
   name: string,
@@ -14,7 +14,7 @@ interface BlogPost {
   description: string,
 }
 
-const items = response.data.data.blog_post as BlogPost[];
+// const items = response.data.data.blog_post as BlogPost[];
 
 ---
 <BaseLayout pageTitle={pageTitle}>
@@ -27,10 +27,10 @@ const items = response.data.data.blog_post as BlogPost[];
         
         <p>There's a lot of work to do!</p>
 
-        {items.map(item => <div>
+        <!-- {items.map(item => <div>
           <h2>{item.title} - {item.date}</h2>
           <p set:html={item.post}></p>
-        </div>)}
+        </div>)} -->
 
       
   </div>
