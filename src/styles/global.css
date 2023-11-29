@@ -1,5 +1,7 @@
 html {
     background-color: #07121f;
+    background-image: url(/etchg2.png);
+    background-repeat: repeat;
     color: #fff;
     font-family: 'Rubik', sans-serif;
     font-weight: 100
@@ -16,10 +18,15 @@ html {
   body {
     margin: 0 auto;
     width: 100%;
-    max-width: 80ch;
+    max-width: 95%;
     padding: 1rem;
     line-height: 1.5;
     position: static;
+    background-image: url(/mv-logo-xl-18.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-font-smoothing: antialiased;
+    font-smooth: always;
   }
   
   * {
@@ -29,7 +36,7 @@ html {
   h1 {
     color: #ea580c;
     font-family: 'Jura', sans-serif;
-    margin: 1rem 0;
+    margin: 2px 0;
     font-size: 2.2rem;
     font-weight: 700
   }
@@ -47,9 +54,12 @@ html {
 
 .container {
   max-width: 100%;
+  min-height: 400px;
   mix-blend-mode: lighten;
   background-color: #121927;
   background-image: radial-gradient(circle, #121927 56%, #0e1420);
+  background-image: url(/hatch.png);
+  background-repeat: repeat;
   border: 1px solid #2f3a4a;
   border-radius: 10px;
   margin-top: 16px;
@@ -72,11 +82,41 @@ html {
   margin-top: 16px;
   margin-bottom: 8px;
   padding: 8px 18px 8px;
-  
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clock-div {
+  display: none;
 }
 
 .post-by {
   font-size: 0.8rem;
+}
+
+.two-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 3fr 0fr;
+}
+
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  margin: 0.25em;
+  border: dotted 1px #f97316;
+  border-radius: .5em;
+  padding: .02em .3em;
+  font-size: 1.15em;
+  background-color: #111827;
 }
 
 .logo-div {
@@ -106,9 +146,8 @@ html {
 }
 
 .me-img {
-  max-height: 250px;
-  position: relative;
-  left: 300px;
+  height: 220px;
+  display: none;
 }
 
 .footer {
@@ -232,10 +271,88 @@ html {
     .home-content-div {
       display: block;
       min-height: 300px;
-      background-image: url(me.png);
-      background-size: auto 250px;
-      background-repeat: no-repeat;
-      background-position: 110% 0%;
+      
       padding: 0px;
     }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+    }
+
+    .me-pic {
+      display: flex;
+      flex-flow: column;
+      align-items: flex-end;
+     
+    }
+    
+    .me-img {
+      margin-right: 16px;
+      margin-top: 16px;
+      margin-left: 16px;
+      display: inline;
+      height: 220px;
+    }
+
+    .my-info {
+      
+    }
+
+    .head {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      border: 0px solid;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .title {
+      border: 0px solid;
+      margin: 0px;
+      padding: 0px 0px 0px 50px;
+    }
+
+    .clock-div {
+      display: flex;
+      flex-direction: column;
+      margin: 0px;
+      padding: 0px;
+      border: 0px solid;
+      align-items: end;
+    }
+
+    #dow {
+      padding: 0px 4px 0px 0px;
+      margin: 0px;
+      border: 0px solid;
+      font-family: 'Jura', sans-serif;
+      text-align: right;
+      color: #607D8B;
+      font-size: 13px;
+      
+  }
+
+  #clock {
+    padding: 0px 4px 0px 0px;
+      margin: 0px;
+      border: 0px solid;
+      font-family: 'Jura', sans-serif;
+      text-align: right;
+      color: #ECEFF1;
+      font-size: 13px;
+     
+  }
+  #date {
+    padding: 0px 4px 0px 0px;
+      margin: 0px;
+      border: 0px solid;
+      font-family: 'Jura', sans-serif;
+      text-align: right;
+      color: #607d8b;
+      font-size: 13px;
+     
+  }
+  
+
   }

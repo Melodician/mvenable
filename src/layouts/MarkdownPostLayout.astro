@@ -17,6 +17,8 @@ const { frontmatter } = Astro.props;
 
 <slot />
 </BaseLayout>
+<div class="progress-bar"></div>
+<div class="progress">0</div>
 <style>
      a:link {
     color: #fdba74;
@@ -38,4 +40,32 @@ const { frontmatter } = Astro.props;
       font-size: 0.9em;
       background-color: #111827;
     }
+
+    .progress-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 10px;
+      background: #fdba74;
+      transform: scaleX(0);
+      transform-origin: 0%;
+    }
+    
+    .progress {
+      position: fixed;
+      bottom: 10px;
+      left: 10px;
+      padding: 10px;
+      background: #fdba74;
+      color: #0f1115;
+      font-size: 18px;
+      font-weight: bold;
+      width: 50px;
+      text-align: center;
+      border-radius: 5px;
+    }
   </style>
+  <script>
+    import "../scripts/scroll.js";
+	</script>

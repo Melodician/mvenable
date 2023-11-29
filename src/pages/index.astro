@@ -1,7 +1,21 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Greeting from '../components/Greeting.jsx';
+import { deliveryClient } from "../lib/kontent";
+import { butterClient } from "../lib/buttercms";
+
 const pageTitle = "Home Page";
+
+const response = await butterClient.content.retrieve(["blog_post"]);
+
+interface BlogPost {
+  name: string,
+  price: number,
+  description: string,
+}
+
+const items = response.data.data.blog_post as BlogPost[];
+
 ---
 <BaseLayout pageTitle={pageTitle}>
   <div class="home-content-div">
@@ -12,5 +26,12 @@ const pageTitle = "Home Page";
           actually have things to share.</p>
         
         <p>There's a lot of work to do!</p>
+
+        {items.map(item => <div>
+          <h2>{item.title} - {item.date}</h2>
+          <p set:html={item.post}></p>
+        </div>)}
+
+      
   </div>
 </BaseLayout>

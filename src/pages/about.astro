@@ -36,19 +36,27 @@ const textCase = "uppercase";
           </style>
 	</head>
     <BaseLayout pageTitle={pageTitle}>
-        <h2>... at least what I can say for now</h2>
+    <div class="about-div">
+        <div class="about-grid">
+            <div class="my-info">
+                <h2>... at least what I can say for now</h2>
           
-        <p>I'm a software developer interested in delivering content in engaging and compelling new ways.</p>
-            <p>I <b>love</b> to code - it's definately my greatest passion these days - but other competing interests include graphic art, game design, and composing music.
-            I play guitar, bass, drums, piano, and just about anything else I can get my hands on but probably feel most at home in a DAW (Cubase).</p>
+                <p>I'm a software developer interested in delivering content in engaging and compelling new ways.</p>
+                <p>I <b>love</b> to code - it's definately my greatest passion these days - but other competing interests include graphic art, game design, and composing music.
+                I play guitar, bass, drums, piano, and just about anything else I can get my hands on but probably feel most at home in a DAW (Cubase).</p>
           
             
-            <p>My skillset includes:</p>
-                <ul>
+                <p>My skillset includes:</p>
+                    <ul>
                     {skills.map((skill) => <li class="skill">{skill}</li>)}
-                </ul>
+                    </ul>
 
-        <p>I am happy to finally be doing this site and I would love to work with others!</p>
-
+                <p>I am happy to finally be doing this site and I would love to work with others!</p>
+            </div>
+            <div class="me-pic">
+                <img class="me-img" src="/meD.png" alt="a cartoon pic of me">
+            </div>
+        </div>
+    </div>
     </BaseLayout> 
 </html>
